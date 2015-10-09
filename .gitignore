@@ -17,4 +17,4 @@ bin/**
 ebin/
 db/
 .rebar/
-.deps/
+deps/
