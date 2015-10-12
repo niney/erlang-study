@@ -46,7 +46,8 @@ start(_StartType, _StartArgs) ->
     %% Cowboy Router 설정
     Dispatch = cowboy_router:compile([
         {'_', [
-            {"/:api/[:what/[:opt]]", mon_http, []}
+            %{"/:api/[:what/[:opt]]", mon_http, []},
+            {"/user", hello_handler, []}
         ]}
     ]),
     %% HTTP Server 실행
